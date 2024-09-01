@@ -1,21 +1,29 @@
 FROM python:3.9
 
-WORKDIR opt/deploy/
-RUN mkdir nvm
-ENV NVM_DIR /opt/deploy/nvm
+RUN useradd longclaw_bakery --create-home && mkdir /app && chown -R longclaw_bakery /app
 
-# Install nvm with node and npm
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash \
-    && . $NVM_DIR/nvm.sh \
-    && nvm install --lts\
-    && nvm use --lts
+WORKDIR /app
 
-ADD . .
-
-RUN pip install -r requirements.txt
-RUN python manage.py makemigrations catalog home \
-    && python manage.py migrate \
-    && python manage.py loadcountries
+ENV PYTHONUNBUFFERED=1 \
+    DJANGO_SETTINGS_MODULE=longclaw_bakery.settings.production \
+    PORT=8000
 
 EXPOSE 8000
-CMD python manage.py runserver 0.0.0.0:8000
+
+RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    curl \
+    git \
+    && apt-get autoremove && rm -rf /var/lib/apt/lists/*
+
+    
+COPY requirements.txt .
+
+RUN pip install -U pip
+RUN pip install -r requirements.txt
+
+USER longclaw_bakery
+ADD . .
+
+CMD tail -f /dev/null

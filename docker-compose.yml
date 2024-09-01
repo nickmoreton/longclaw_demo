@@ -2,7 +2,26 @@ services:
   web:
     build: .
     volumes:
-      - .:/opt/deploy/
+      - .:/app
     ports:
       - "8000:8000"
+    environment:
+      DATABASE_URL: postgres://longclaw_bakery:longclaw_bakery@db:5432/longclaw_bakery
+      DJANGO_SETTINGS_MODULE: longclaw_bakery.settings.dev
+      WAGTAILADMIN_BASE_URL: http://localhost:8000
+      SECRET_KEY: "secret"
+      ALLOWED_HOSTS: "127.0.0.1,localhost"
+      STRIPE_SECRET: "secret"
+    depends_on:
+      - db
     command: tail -f /dev/null
+
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: longclaw_bakery
+      POSTGRES_PASSWORD: longclaw_bakery
+      POSTGRES_DB: longclaw_bakery
+    ports:
+      - "5432:5432"
