@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail.core',
+    'wagtail',
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.settings',
     'wagtail.api.v2',
@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
-    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.legacy.sitemiddleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -137,11 +137,11 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "longclaw_bakery"
+WAGTAIL_SITE_NAME = "Longclaw Bakery"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+WAGTAILADMIN_BASE_URL = 'http://example.com'
 
 # Longclaw settings
 
@@ -151,3 +151,5 @@ PAYMENT_GATEWAY = 'longclaw.checkout.gateways.stripe.StripePayment'
 STRIPE_SECRET = os.environ.get('STRIPE_SECRET', '')
 
 PRODUCT_VARIANT_MODEL = 'catalog.ProductVariant'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
