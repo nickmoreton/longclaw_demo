@@ -11,6 +11,9 @@
         <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/longclaw_bakery.css' %}">
@@ -25,10 +28,10 @@
             {% wagtailuserbar %}
             <div class="header">
                 <div>
-                    <a href="/products">Products</a>
+                    <a class="header-brand" href="/">Longclaw Bakery</a>
                 </div>
                 <div>
-                    <a class="header-brand" href="/">Longclaw Bakery</a>
+                    <a href="/products">Products</a>
                 </div>
                 <div>
                     <a href="{% url 'longclaw_basket' %}"><span id="basket-item-count"> </span><i class="fas fa-shopping-basket fa-lg" aria-hidden="true"></i></a>
