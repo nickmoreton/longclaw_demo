@@ -24,3 +24,31 @@
 @use "../../node_modules/@picocss/pico/scss/pico.scss" with (
   $theme-color: "orange",
 );
+
+header {
+  background-color: var(--pico-primary);
+  *:not(a) {
+    color: var(--pico-primary-inverse);
+  }
+  a {
+    // color: var(--pico-primary-inverse);
+    font-weight: 900;
+    &:hover {
+      color: var(--pico-primary-inverse);
+    }
+  }
+}
+
+footer {
+  background-color: var(--pico-secondary);
+  *:not(a) {
+    color: var(--pico-secondary-inverse);
+  }
+  a {
+    // color: var(--pico-secondary-inverse);
+    font-weight: 900;
+    &:hover {
+      color: var(--pico-secondary-inverse);
+    }
+  }
+}

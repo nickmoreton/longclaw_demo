@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../client/scripts/imported.js", "../../client/scripts/main.js"],
+  "sourcesContent": ["// Exmaple of a module that is imported into another module\n\nexport default function imported() {\n    console.log('imported');\n}\n", "// Example of ES6 syntax\nimport imported from \"./imported\";\n\nclass Main {\n  constructor() {\n    this.message = 'Hello, world!';\n  }\n  say() {\n    console.log(this.message);\n  }\n}\n\nlet main = new Main();\nmain.say();\nimported();\n"],
+  "mappings": "MAEe,SAARA,GAA4B,CAC/B,QAAQ,IAAI,UAAU,CAC1B,CCDA,IAAMC,EAAN,KAAW,CACT,aAAc,CACZ,KAAK,QAAU,eACjB,CACA,KAAM,CACJ,QAAQ,IAAI,KAAK,OAAO,CAC1B,CACF,EAEIC,EAAO,IAAID,EACfC,EAAK,IAAI,EACTC,EAAS",
+  "names": ["imported", "Main", "main", "imported"]
+}
