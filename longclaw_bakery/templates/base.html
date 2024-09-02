@@ -31,10 +31,22 @@
                 {% block header %}
                 {# Override this in templates to add extra header content #}
                 <nav>
-                    <a role="button" href="/">Longclaw Bakery</a>
-                    <a role="button" href="/product-range-one">Product Range One</a>
-                    <a role="button" href="/product-range-two">Product Range Two</a>
-                    <a role="button" href="{% url 'longclaw_basket' %}"><span class="material-symbols-rounded">shopping_basket</span></a>
+                    <ul>
+                        <li>
+                            <a role="button" href="/">Longclaw Bakery</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a role="button" href="/product-range-one">Product Range One</a>
+                        </li>
+                        <li>
+                            <a role="button" href="/product-range-two">Product Range Two</a>
+                        </li>
+                        <li>
+                            <a role="button" href="{% url 'longclaw_basket' %}"><span class="material-symbols-rounded">shopping_basket</span></a>
+                        </li>
+                    </ul>
                 </nav>
                 {% endblock %}
             </div>
