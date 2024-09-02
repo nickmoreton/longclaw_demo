@@ -6,12 +6,12 @@ services:
     ports:
       - "8000:8000"
     environment:
+      ALLOWED_HOSTS: "127.0.0.1,localhost"
       DATABASE_URL: postgres://longclaw_bakery:longclaw_bakery@db:5432/longclaw_bakery
       DJANGO_SETTINGS_MODULE: longclaw_bakery.settings.dev
-      WAGTAILADMIN_BASE_URL: http://localhost:8000
       SECRET_KEY: "secret"
-      ALLOWED_HOSTS: "127.0.0.1,localhost"
       STRIPE_SECRET: "secret"
+      WAGTAILADMIN_BASE_URL: http://localhost:8000
     depends_on:
       - db
     command: tail -f /dev/null
