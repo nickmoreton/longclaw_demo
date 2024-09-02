@@ -18,12 +18,14 @@ class Modal {
   }
 
   init() {
+    if (this.modal) {
     this.modalClose.addEventListener('click', () => {
       this.close();
     });
     this.modalOpen.addEventListener('click', () => {
       this.open();
     });
+}
   }
 }
 
