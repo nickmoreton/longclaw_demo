@@ -1,0 +1,26 @@
+// Pico with orange primary color
+/* "color-families":
+    red
+    pink
+    fuchsia
+    purple
+    violet
+    indigo
+    blue
+    azure
+    cyan
+    jade
+    green
+    lime
+    yellow
+    amber
+    pumpkin
+    orange <-- primary color
+    sand
+    grey
+    zinc
+    slate
+ */
+@use "../../node_modules/@picocss/pico/scss/pico.scss" with (
+  $theme-color: "orange",
+);
