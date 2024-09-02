@@ -10,7 +10,7 @@ env = os.environ.copy()
 
 DEBUG = env.get('DEBUG', 'False').lower() == 'true'
 SECRET_KEY = env.get('SECRET_KEY', 'q%ng_7whu^xd-mqf#%xh*s!-5!=pqhk-vc0-2n*l4ixh4z7qe#')
-ALLOWED_HOSTS = env.get('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = env.get('ALLOWED_HOSTS', '').split(',')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
