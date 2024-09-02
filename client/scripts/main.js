@@ -1,5 +1,6 @@
 // Example of ES6 syntax
 import imported from "./imported";
+import Modal from "./modal";
 
 class Main {
   constructor() {
@@ -13,3 +14,5 @@ class Main {
 let main = new Main();
 main.say();
 imported();
+
+let modal = new Modal().init();
