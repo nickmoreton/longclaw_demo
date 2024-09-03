@@ -1,0 +1,1489 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Moderators",
+    "permissions": [
+      [
+        "access_admin",
+        "wagtailadmin",
+        "admin"
+      ],
+      [
+        "add_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "change_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "choose_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "delete_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "add_image",
+        "wagtailimages",
+        "image"
+      ],
+      [
+        "change_image",
+        "wagtailimages",
+        "image"
+      ],
+      [
+        "delete_image",
+        "wagtailimages",
+        "image"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Editors",
+    "permissions": [
+      [
+        "access_admin",
+        "wagtailadmin",
+        "admin"
+      ],
+      [
+        "add_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "change_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "choose_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "delete_document",
+        "wagtaildocs",
+        "document"
+      ],
+      [
+        "add_image",
+        "wagtailimages",
+        "image"
+      ],
+      [
+        "change_image",
+        "wagtailimages",
+        "image"
+      ],
+      [
+        "delete_image",
+        "wagtailimages",
+        "image"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$rX2s357JCWLg43jFlV62EL$CTuV2imKYGfB06ApfUW8Es1YEnBGKuT7YTnQp0GJSLw=",
+    "last_login": "2024-09-03T17:33:38.649Z",
+    "is_superuser": true,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-09-03T16:50:29.634Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "wagtailusers.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "submitted_notifications": true,
+    "approved_notifications": true,
+    "rejected_notifications": true,
+    "updated_comments_notifications": true,
+    "preferred_language": "",
+    "current_time_zone": "",
+    "avatar": "",
+    "dismissibles": {},
+    "theme": "system"
+  }
+},
+{
+  "model": "wagtailimages.image",
+  "pk": 3,
+  "fields": {
+    "collection": 1,
+    "title": "Vadim Kaipov Unsplash",
+    "file": "original_images/Vadim_Kaipov_Unsplash.jpg",
+    "width": 6241,
+    "height": 4446,
+    "created_at": "2024-09-03T17:37:49.265Z",
+    "uploaded_by_user": [
+      "test"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 4034474,
+    "file_hash": "99f2b51be6ebf73807f675abdd8b4dda2bf6fed4"
+  }
+},
+{
+  "model": "wagtailsearch.indexentry",
+  "pk": 1,
+  "fields": {
+    "content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "1",
+    "title_norm": 2.0,
+    "autocomplete": "'root':1",
+    "title": "'root':1B",
+    "body": ""
+  }
+},
+{
+  "model": "wagtailsearch.indexentry",
+  "pk": 2,
+  "fields": {
+    "content_type": [
+      "home",
+      "homepage"
+    ],
+    "object_id": "3",
+    "title_norm": 1.0,
+    "autocomplete": "",
+    "title": "",
+    "body": ""
+  }
+},
+{
+  "model": "wagtailsearch.indexentry",
+  "pk": 4,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "object_id": "4",
+    "title_norm": 1.0,
+    "autocomplete": "",
+    "title": "",
+    "body": ""
+  }
+},
+{
+  "model": "wagtailsearch.indexentry",
+  "pk": 7,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "object_id": "5",
+    "title_norm": 1.0,
+    "autocomplete": "",
+    "title": "",
+    "body": ""
+  }
+},
+{
+  "model": "wagtailsearch.indexentry",
+  "pk": 10,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "object_id": "6",
+    "title_norm": 1.0,
+    "autocomplete": "'one':2 'product':1",
+    "title": "'one':2B 'product':1B",
+    "body": ""
+  }
+},
+{
+  "model": "wagtailsearch.indexentry",
+  "pk": 17,
+  "fields": {
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": "3",
+    "title_norm": 0.6666666666666666,
+    "autocomplete": "'kaipov':2 'unsplash':3 'vadim':1",
+    "title": "'kaipov':2A 'unsplash':3A 'vadim':1A",
+    "body": ""
+  }
+},
+{
+  "model": "wagtailcore.locale",
+  "pk": 1,
+  "fields": {
+    "language_code": "en-gb"
+  }
+},
+{
+  "model": "wagtailcore.site",
+  "pk": 2,
+  "fields": {
+    "hostname": "localhost",
+    "port": 80,
+    "site_name": "",
+    "root_page": 3,
+    "is_default_site": true
+  }
+},
+{
+  "model": "wagtailcore.modellogentry",
+  "pk": 1,
+  "fields": {
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "label": "Vadim Kaipov Unsplash",
+    "action": "wagtail.delete",
+    "data": {},
+    "timestamp": "2024-09-03T17:33:51.707Z",
+    "uuid": "26d68fa8-c6b2-4b01-9b31-8bccad253d56",
+    "user": [
+      "test"
+    ],
+    "revision": null,
+    "content_changed": false,
+    "deleted": false,
+    "object_id": "1"
+  }
+},
+{
+  "model": "wagtailcore.modellogentry",
+  "pk": 2,
+  "fields": {
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "label": "Vadim Kaipov Unsplash",
+    "action": "wagtail.delete",
+    "data": {},
+    "timestamp": "2024-09-03T17:37:26.578Z",
+    "uuid": "7cf3f4db-e2ab-435f-9cf9-a8905baaeae2",
+    "user": [
+      "test"
+    ],
+    "revision": null,
+    "content_changed": false,
+    "deleted": false,
+    "object_id": "2"
+  }
+},
+{
+  "model": "wagtailcore.collection",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 0,
+    "name": "Root"
+  }
+},
+{
+  "model": "wagtailcore.referenceindex",
+  "pk": 7,
+  "fields": {
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "base_content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": "3",
+    "to_content_type": [
+      "wagtailcore",
+      "collection"
+    ],
+    "to_object_id": "1",
+    "model_path": "collection",
+    "content_path": "collection",
+    "content_path_hash": "b40b1263-e929-57f2-a7f8-9dbce56b887b"
+  }
+},
+{
+  "model": "wagtailcore.referenceindex",
+  "pk": 9,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "6",
+    "to_content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "to_object_id": "3",
+    "model_path": "images.item.image",
+    "content_path": "images.3.image",
+    "content_path_hash": "a9f51fd4-59cc-5acc-8e3e-6bc693c9d265"
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 1,
+    "translation_key": "8ade4289-775b-44f2-a0c0-8fa81ed672fd",
+    "locale": 1,
+    "latest_revision": null,
+    "live": true,
+    "has_unpublished_changes": false,
+    "first_published_at": null,
+    "last_published_at": null,
+    "live_revision": null,
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "title": "Root",
+    "draft_title": "Root",
+    "slug": "root",
+    "content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "url_path": "/",
+    "owner": null,
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "latest_revision_created_at": null,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 3,
+  "fields": {
+    "path": "00010001",
+    "depth": 2,
+    "numchild": 2,
+    "translation_key": "63e00a89-42ff-4abd-a2e1-added705c287",
+    "locale": 1,
+    "latest_revision": null,
+    "live": true,
+    "has_unpublished_changes": false,
+    "first_published_at": null,
+    "last_published_at": null,
+    "live_revision": null,
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "title": "Home",
+    "draft_title": "Home",
+    "slug": "home",
+    "content_type": [
+      "home",
+      "homepage"
+    ],
+    "url_path": "/home/",
+    "owner": null,
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "latest_revision_created_at": null,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 4,
+  "fields": {
+    "path": "000100010001",
+    "depth": 3,
+    "numchild": 1,
+    "translation_key": "46cd02a6-da9d-4640-a090-d371fed14241",
+    "locale": 1,
+    "latest_revision": 1,
+    "live": true,
+    "has_unpublished_changes": false,
+    "first_published_at": "2024-09-03T16:57:31.376Z",
+    "last_published_at": "2024-09-03T16:57:31.376Z",
+    "live_revision": 1,
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "title": "Product Range One",
+    "draft_title": "Product Range One",
+    "slug": "product-range-one",
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "url_path": "/home/product-range-one/",
+    "owner": [
+      "test"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "latest_revision_created_at": "2024-09-03T16:57:31.353Z",
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 5,
+  "fields": {
+    "path": "000100010002",
+    "depth": 3,
+    "numchild": 0,
+    "translation_key": "2c703e04-2156-4eb3-9ae1-dee83c2a56bd",
+    "locale": 1,
+    "latest_revision": 2,
+    "live": true,
+    "has_unpublished_changes": false,
+    "first_published_at": "2024-09-03T16:57:43.222Z",
+    "last_published_at": "2024-09-03T16:57:43.222Z",
+    "live_revision": 2,
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "title": "Product Range Two",
+    "draft_title": "Product Range Two",
+    "slug": "product-range-two",
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "url_path": "/home/product-range-two/",
+    "owner": [
+      "test"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "latest_revision_created_at": "2024-09-03T16:57:43.201Z",
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 6,
+  "fields": {
+    "path": "0001000100010001",
+    "depth": 4,
+    "numchild": 0,
+    "translation_key": "81336a7d-f4a6-4f85-acd1-291afc998188",
+    "locale": 1,
+    "latest_revision": 5,
+    "live": true,
+    "has_unpublished_changes": false,
+    "first_published_at": "2024-09-03T17:06:13.156Z",
+    "last_published_at": "2024-09-03T17:38:03.572Z",
+    "live_revision": 5,
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "title": "Product One",
+    "draft_title": "Product One",
+    "slug": "product-one",
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "url_path": "/home/product-range-one/product-one/",
+    "owner": [
+      "test"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "latest_revision_created_at": "2024-09-03T17:38:03.541Z",
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.revision",
+  "pk": 1,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "4",
+    "submitted_for_moderation": false,
+    "created_at": "2024-09-03T16:57:31.353Z",
+    "user": [
+      "test"
+    ],
+    "object_str": "Product Range One",
+    "content": {
+      "pk": 4,
+      "live": true,
+      "path": "000100010001",
+      "slug": "product-range-one",
+      "depth": 3,
+      "owner": 1,
+      "title": "Product Range One",
+      "locale": 1,
+      "locked": false,
+      "expired": false,
+      "alias_of": null,
+      "numchild": 0,
+      "url_path": "/home/product-range-one/",
+      "expire_at": null,
+      "locked_at": null,
+      "locked_by": null,
+      "seo_title": "",
+      "go_live_at": null,
+      "draft_title": "Product Range One",
+      "content_type": 55,
+      "live_revision": null,
+      "show_in_menus": false,
+      "latest_revision": null,
+      "translation_key": "46cd02a6-da9d-4640-a090-d371fed14241",
+      "last_published_at": null,
+      "first_published_at": null,
+      "search_description": "",
+      "wagtail_admin_comments": [],
+      "has_unpublished_changes": false,
+      "latest_revision_created_at": null
+    },
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.revision",
+  "pk": 2,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "5",
+    "submitted_for_moderation": false,
+    "created_at": "2024-09-03T16:57:43.201Z",
+    "user": [
+      "test"
+    ],
+    "object_str": "Product Range Two",
+    "content": {
+      "pk": 5,
+      "live": true,
+      "path": "000100010002",
+      "slug": "product-range-two",
+      "depth": 3,
+      "owner": 1,
+      "title": "Product Range Two",
+      "locale": 1,
+      "locked": false,
+      "expired": false,
+      "alias_of": null,
+      "numchild": 0,
+      "url_path": "/home/product-range-two/",
+      "expire_at": null,
+      "locked_at": null,
+      "locked_by": null,
+      "seo_title": "",
+      "go_live_at": null,
+      "draft_title": "Product Range Two",
+      "content_type": 55,
+      "live_revision": null,
+      "show_in_menus": false,
+      "latest_revision": null,
+      "translation_key": "2c703e04-2156-4eb3-9ae1-dee83c2a56bd",
+      "last_published_at": null,
+      "first_published_at": null,
+      "search_description": "",
+      "wagtail_admin_comments": [],
+      "has_unpublished_changes": false,
+      "latest_revision_created_at": null
+    },
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.revision",
+  "pk": 3,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "6",
+    "submitted_for_moderation": false,
+    "created_at": "2024-09-03T17:06:13.135Z",
+    "user": [
+      "test"
+    ],
+    "object_str": "Product One",
+    "content": {
+      "pk": 6,
+      "live": true,
+      "path": "0001000100020001",
+      "slug": "product-one",
+      "depth": 4,
+      "owner": 1,
+      "title": "Product One",
+      "images": [
+        {
+          "pk": 1,
+          "image": 1,
+          "caption": "",
+          "product": 6,
+          "sort_order": 0
+        }
+      ],
+      "locale": 1,
+      "locked": false,
+      "expired": false,
+      "alias_of": null,
+      "numchild": 0,
+      "url_path": "/home/product-range-two/product-one/",
+      "variants": [
+        {
+          "pk": 1,
+          "ref": "Small",
+          "slug": "productonesmall",
+          "stock": 1,
+          "product": 6,
+          "discount": false,
+          "base_price": "10.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        },
+        {
+          "pk": 2,
+          "ref": "Medium",
+          "slug": "productonemedium",
+          "stock": 10,
+          "product": 6,
+          "discount": false,
+          "base_price": "20.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": true,
+          "discount_percent": 20
+        },
+        {
+          "pk": 3,
+          "ref": "Large",
+          "slug": "productonelarge",
+          "stock": 0,
+          "product": 6,
+          "discount": false,
+          "base_price": "30.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        }
+      ],
+      "expire_at": null,
+      "locked_at": null,
+      "locked_by": null,
+      "seo_title": "",
+      "go_live_at": null,
+      "description": "<p data-block-key=\"iwfyc\">some text</p>",
+      "draft_title": "Product One",
+      "content_type": 54,
+      "live_revision": null,
+      "show_in_menus": false,
+      "latest_revision": null,
+      "translation_key": "81336a7d-f4a6-4f85-acd1-291afc998188",
+      "last_published_at": null,
+      "first_published_at": null,
+      "search_description": "",
+      "wagtail_admin_comments": [],
+      "has_unpublished_changes": false,
+      "latest_revision_created_at": null
+    },
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.revision",
+  "pk": 4,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "6",
+    "submitted_for_moderation": false,
+    "created_at": "2024-09-03T17:34:14.497Z",
+    "user": [
+      "test"
+    ],
+    "object_str": "Product One",
+    "content": {
+      "pk": 6,
+      "live": true,
+      "path": "0001000100010001",
+      "slug": "product-one",
+      "depth": 4,
+      "owner": 1,
+      "title": "Product One",
+      "images": [
+        {
+          "pk": null,
+          "image": 2,
+          "caption": "",
+          "product": 6,
+          "sort_order": 0
+        }
+      ],
+      "locale": 1,
+      "locked": false,
+      "expired": false,
+      "alias_of": null,
+      "numchild": 0,
+      "url_path": "/home/product-range-one/product-one/",
+      "variants": [
+        {
+          "pk": 1,
+          "ref": "Small",
+          "slug": "productonesmall",
+          "stock": 1,
+          "product": 6,
+          "discount": false,
+          "base_price": "10.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        },
+        {
+          "pk": 2,
+          "ref": "Medium",
+          "slug": "productonemedium",
+          "stock": 10,
+          "product": 6,
+          "discount": false,
+          "base_price": "20.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": true,
+          "discount_percent": 20
+        },
+        {
+          "pk": 3,
+          "ref": "Large",
+          "slug": "productonelarge",
+          "stock": 0,
+          "product": 6,
+          "discount": false,
+          "base_price": "30.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        }
+      ],
+      "expire_at": null,
+      "locked_at": null,
+      "locked_by": null,
+      "seo_title": "",
+      "go_live_at": null,
+      "description": "<p data-block-key=\"iwfyc\">some text</p>",
+      "draft_title": "Product One",
+      "content_type": 54,
+      "live_revision": 3,
+      "show_in_menus": false,
+      "latest_revision": 3,
+      "translation_key": "81336a7d-f4a6-4f85-acd1-291afc998188",
+      "last_published_at": "2024-09-03T17:06:13.156Z",
+      "first_published_at": "2024-09-03T17:06:13.156Z",
+      "search_description": "",
+      "wagtail_admin_comments": [],
+      "has_unpublished_changes": false,
+      "latest_revision_created_at": "2024-09-03T17:06:13.135Z"
+    },
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.revision",
+  "pk": 5,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "6",
+    "submitted_for_moderation": false,
+    "created_at": "2024-09-03T17:38:03.541Z",
+    "user": [
+      "test"
+    ],
+    "object_str": "Product One",
+    "content": {
+      "pk": 6,
+      "live": true,
+      "path": "0001000100010001",
+      "slug": "product-one",
+      "depth": 4,
+      "owner": 1,
+      "title": "Product One",
+      "images": [
+        {
+          "pk": null,
+          "image": 3,
+          "caption": "",
+          "product": 6,
+          "sort_order": 0
+        }
+      ],
+      "locale": 1,
+      "locked": false,
+      "expired": false,
+      "alias_of": null,
+      "numchild": 0,
+      "url_path": "/home/product-range-one/product-one/",
+      "variants": [
+        {
+          "pk": 1,
+          "ref": "Small",
+          "slug": "productonesmall",
+          "stock": 1,
+          "product": 6,
+          "discount": false,
+          "base_price": "10.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        },
+        {
+          "pk": 2,
+          "ref": "Medium",
+          "slug": "productonemedium",
+          "stock": 10,
+          "product": 6,
+          "discount": false,
+          "base_price": "20.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": true,
+          "discount_percent": 20
+        },
+        {
+          "pk": 3,
+          "ref": "Large",
+          "slug": "productonelarge",
+          "stock": 0,
+          "product": 6,
+          "discount": false,
+          "base_price": "30.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        }
+      ],
+      "expire_at": null,
+      "locked_at": null,
+      "locked_by": null,
+      "seo_title": "",
+      "go_live_at": null,
+      "description": "<p data-block-key=\"iwfyc\">some text</p>",
+      "draft_title": "Product One",
+      "content_type": 54,
+      "live_revision": 4,
+      "show_in_menus": false,
+      "latest_revision": 4,
+      "translation_key": "81336a7d-f4a6-4f85-acd1-291afc998188",
+      "last_published_at": "2024-09-03T17:34:14.526Z",
+      "first_published_at": "2024-09-03T17:06:13.156Z",
+      "search_description": "",
+      "wagtail_admin_comments": [],
+      "has_unpublished_changes": false,
+      "latest_revision_created_at": "2024-09-03T17:34:14.497Z"
+    },
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.workflowpage",
+  "pk": 1,
+  "fields": {
+    "workflow": 1
+  }
+},
+{
+  "model": "wagtailcore.workflowtask",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "workflow": 1,
+    "task": 1
+  }
+},
+{
+  "model": "wagtailcore.task",
+  "pk": 1,
+  "fields": {
+    "name": "Moderators approval",
+    "content_type": [
+      "wagtailcore",
+      "groupapprovaltask"
+    ],
+    "active": true
+  }
+},
+{
+  "model": "wagtailcore.workflow",
+  "pk": 1,
+  "fields": {
+    "name": "Moderators approval",
+    "active": true
+  }
+},
+{
+  "model": "wagtailcore.groupapprovaltask",
+  "pk": 1,
+  "fields": {
+    "groups": [
+      [
+        "Moderators"
+      ]
+    ]
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 1,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "label": "Product Range One",
+    "action": "wagtail.create",
+    "data": {},
+    "timestamp": "2024-09-03T16:57:31.343Z",
+    "uuid": "a5f92373-2f22-4b0b-9d0c-5bb0bdbafdaf",
+    "user": [
+      "test"
+    ],
+    "revision": null,
+    "content_changed": true,
+    "deleted": false,
+    "page": 4
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 2,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "label": "Product Range One",
+    "action": "wagtail.edit",
+    "data": {},
+    "timestamp": "2024-09-03T16:57:31.365Z",
+    "uuid": "a5f92373-2f22-4b0b-9d0c-5bb0bdbafdaf",
+    "user": [
+      "test"
+    ],
+    "revision": 1,
+    "content_changed": true,
+    "deleted": false,
+    "page": 4
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 3,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "label": "Product Range One",
+    "action": "wagtail.publish",
+    "data": {},
+    "timestamp": "2024-09-03T16:57:31.394Z",
+    "uuid": "a5f92373-2f22-4b0b-9d0c-5bb0bdbafdaf",
+    "user": [
+      "test"
+    ],
+    "revision": 1,
+    "content_changed": true,
+    "deleted": false,
+    "page": 4
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 4,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "label": "Product Range Two",
+    "action": "wagtail.create",
+    "data": {},
+    "timestamp": "2024-09-03T16:57:43.191Z",
+    "uuid": "2c0157f6-d4f0-4651-bf20-b221c1163448",
+    "user": [
+      "test"
+    ],
+    "revision": null,
+    "content_changed": true,
+    "deleted": false,
+    "page": 5
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 5,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "label": "Product Range Two",
+    "action": "wagtail.edit",
+    "data": {},
+    "timestamp": "2024-09-03T16:57:43.212Z",
+    "uuid": "2c0157f6-d4f0-4651-bf20-b221c1163448",
+    "user": [
+      "test"
+    ],
+    "revision": 2,
+    "content_changed": true,
+    "deleted": false,
+    "page": 5
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 6,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "productindex"
+    ],
+    "label": "Product Range Two",
+    "action": "wagtail.publish",
+    "data": {},
+    "timestamp": "2024-09-03T16:57:43.240Z",
+    "uuid": "2c0157f6-d4f0-4651-bf20-b221c1163448",
+    "user": [
+      "test"
+    ],
+    "revision": 2,
+    "content_changed": true,
+    "deleted": false,
+    "page": 5
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 7,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.create",
+    "data": {},
+    "timestamp": "2024-09-03T17:06:13.125Z",
+    "uuid": "c446eb48-53d2-4f8c-be54-06dfa984a833",
+    "user": [
+      "test"
+    ],
+    "revision": null,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 8,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.edit",
+    "data": {},
+    "timestamp": "2024-09-03T17:06:13.144Z",
+    "uuid": "c446eb48-53d2-4f8c-be54-06dfa984a833",
+    "user": [
+      "test"
+    ],
+    "revision": 3,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 9,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.publish",
+    "data": {},
+    "timestamp": "2024-09-03T17:06:13.176Z",
+    "uuid": "c446eb48-53d2-4f8c-be54-06dfa984a833",
+    "user": [
+      "test"
+    ],
+    "revision": 3,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 10,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.move",
+    "data": {
+      "source": {
+        "id": 5,
+        "title": "Product Range Two"
+      },
+      "destination": {
+        "id": 4,
+        "title": "Product Range One"
+      }
+    },
+    "timestamp": "2024-09-03T17:06:42.971Z",
+    "uuid": "d4af2c47-5d1c-4545-8328-25d51c4724f4",
+    "user": [
+      "test"
+    ],
+    "revision": null,
+    "content_changed": false,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 11,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.edit",
+    "data": {},
+    "timestamp": "2024-09-03T17:34:14.512Z",
+    "uuid": "8c73e203-57f2-45e1-87f7-ee980d252b52",
+    "user": [
+      "test"
+    ],
+    "revision": 4,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 12,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.publish",
+    "data": {},
+    "timestamp": "2024-09-03T17:34:14.550Z",
+    "uuid": "8c73e203-57f2-45e1-87f7-ee980d252b52",
+    "user": [
+      "test"
+    ],
+    "revision": 4,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 13,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.edit",
+    "data": {},
+    "timestamp": "2024-09-03T17:38:03.555Z",
+    "uuid": "98a1ad7d-9b41-46d0-a5e0-48ab1d4cb672",
+    "user": [
+      "test"
+    ],
+    "revision": 5,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 14,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.publish",
+    "data": {},
+    "timestamp": "2024-09-03T17:38:03.596Z",
+    "uuid": "98a1ad7d-9b41-46d0-a5e0-48ab1d4cb672",
+    "user": [
+      "test"
+    ],
+    "revision": 5,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagesubscription",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "page": 4,
+    "comment_notifications": true
+  }
+},
+{
+  "model": "wagtailcore.pagesubscription",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "page": 5,
+    "comment_notifications": true
+  }
+},
+{
+  "model": "wagtailcore.pagesubscription",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "page": 6,
+    "comment_notifications": true
+  }
+},
+{
+  "model": "configuration.configuration",
+  "pk": 1,
+  "fields": {
+    "site": [
+      "localhost",
+      80
+    ],
+    "default_shipping_rate": "3.95",
+    "default_shipping_carrier": "Royal Mail",
+    "default_shipping_enabled": false,
+    "shipping_origin": null,
+    "currency_html_code": "&pound;",
+    "currency": "GBP"
+  }
+},
+{
+  "model": "home.homepage",
+  "pk": 3,
+  "fields": {}
+},
+{
+  "model": "catalog.productindex",
+  "pk": 4,
+  "fields": {}
+},
+{
+  "model": "catalog.productindex",
+  "pk": 5,
+  "fields": {}
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "description": "<p data-block-key=\"iwfyc\">some text</p>"
+  }
+},
+{
+  "model": "catalog.productvariant",
+  "pk": 1,
+  "fields": {
+    "base_price": "10.00",
+    "ref": "Small",
+    "stock": 1,
+    "product": 6,
+    "slug": "productonesmall",
+    "description": "<p data-block-key=\"ksews\">some text</p>",
+    "gluten_free": false,
+    "vegetarian": false,
+    "discount": false,
+    "discount_percent": 20
+  }
+},
+{
+  "model": "catalog.productvariant",
+  "pk": 2,
+  "fields": {
+    "base_price": "20.00",
+    "ref": "Medium",
+    "stock": 10,
+    "product": 6,
+    "slug": "productonemedium",
+    "description": "<p data-block-key=\"ksews\">some text</p>",
+    "gluten_free": true,
+    "vegetarian": false,
+    "discount": false,
+    "discount_percent": 20
+  }
+},
+{
+  "model": "catalog.productvariant",
+  "pk": 3,
+  "fields": {
+    "base_price": "30.00",
+    "ref": "Large",
+    "stock": 0,
+    "product": 6,
+    "slug": "productonelarge",
+    "description": "<p data-block-key=\"ksews\">some text</p>",
+    "gluten_free": false,
+    "vegetarian": false,
+    "discount": false,
+    "discount_percent": 20
+  }
+},
+{
+  "model": "catalog.productimage",
+  "pk": 3,
+  "fields": {
+    "sort_order": 0,
+    "product": 6,
+    "image": 3,
+    "caption": ""
+  }
+},
+{
+  "model": "wagtailredirects.redirect",
+  "pk": 1,
+  "fields": {
+    "old_path": "/product-range-two/product-one",
+    "site": [
+      "localhost",
+      80
+    ],
+    "is_permanent": true,
+    "redirect_page": 6,
+    "redirect_page_route_path": "",
+    "redirect_link": "",
+    "automatically_created": true,
+    "created_at": "2024-09-03T17:06:42.968Z"
+  }
+}
+]
