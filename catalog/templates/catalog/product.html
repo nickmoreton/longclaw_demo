@@ -37,9 +37,9 @@
             <td><p>&euro;{{variant.price}}</p></td>
             <td>
                 {% if variant.stock > 0 %}
-                {% comment %}
+                
                     {% add_to_basket_btn variant.id btn_text="Add To Basket" %}
-                {% endcomment %}
+                
                 {% else %}
                 <span class="label label-danger">Sold out</span>
                 {% endif %}

@@ -18,6 +18,7 @@
                 <th scope="col"></th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,7 @@
                 <td>{{item.variant.product.title}} - {{item.variant.ref}}</td>
                 <td>{{item.quantity}}</td>
                 <td>{{item.total}}</td>
+                <td><a href="#" role="delete-basket-item" data-id="{{ item.id }}">Delete</a>{% csrf_token %}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -35,14 +37,18 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>Total</td>
                 <th scope="row">{{total_price}}</th>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td></td>
-                <th scope="row"><a href="/checkout" class="btn btn-default">Checkout</a></th>
+                <th scope="row">
+                    <a href="/checkout">Checkout</a>
+                </th>
+                <td></td>
             </tr>
             {% endif %}
         </tfoot>
