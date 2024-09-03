@@ -102,7 +102,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$rX2s357JCWLg43jFlV62EL$CTuV2imKYGfB06ApfUW8Es1YEnBGKuT7YTnQp0GJSLw=",
-    "last_login": "2024-09-03T17:33:38.649Z",
+    "last_login": "2024-09-03T21:23:29.169Z",
     "is_superuser": true,
     "username": "test",
     "first_name": "",
@@ -363,6 +363,29 @@
   }
 },
 {
+  "model": "wagtailcore.referenceindex",
+  "pk": 11,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "6",
+    "to_content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "to_object_id": "3",
+    "model_path": "images.item.image",
+    "content_path": "images.4.image",
+    "content_path_hash": "a54e5b02-dd7b-5236-8e17-cac820f51729"
+  }
+},
+{
   "model": "wagtailcore.page",
   "pk": 1,
   "fields": {
@@ -523,12 +546,12 @@
     "numchild": 0,
     "translation_key": "81336a7d-f4a6-4f85-acd1-291afc998188",
     "locale": 1,
-    "latest_revision": 5,
+    "latest_revision": 6,
     "live": true,
     "has_unpublished_changes": false,
     "first_published_at": "2024-09-03T17:06:13.156Z",
-    "last_published_at": "2024-09-03T17:38:03.572Z",
-    "live_revision": 5,
+    "last_published_at": "2024-09-03T21:24:45.486Z",
+    "live_revision": 6,
     "go_live_at": null,
     "expire_at": null,
     "expired": false,
@@ -549,7 +572,7 @@
     "seo_title": "",
     "show_in_menus": false,
     "search_description": "",
-    "latest_revision_created_at": "2024-09-03T17:38:03.541Z",
+    "latest_revision_created_at": "2024-09-03T21:24:45.437Z",
     "alias_of": null
   }
 },
@@ -977,6 +1000,118 @@
   }
 },
 {
+  "model": "wagtailcore.revision",
+  "pk": 6,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "base_content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "object_id": "6",
+    "submitted_for_moderation": false,
+    "created_at": "2024-09-03T21:24:45.437Z",
+    "user": [
+      "test"
+    ],
+    "object_str": "Product One",
+    "content": {
+      "pk": 6,
+      "live": true,
+      "path": "0001000100010001",
+      "slug": "product-one",
+      "depth": 4,
+      "owner": 1,
+      "title": "Product One",
+      "images": [
+        {
+          "pk": 3,
+          "image": 3,
+          "caption": "A Caption",
+          "product": 6,
+          "sort_order": 0
+        },
+        {
+          "pk": null,
+          "image": 3,
+          "caption": "A Caption",
+          "product": 6,
+          "sort_order": 1
+        }
+      ],
+      "locale": 1,
+      "locked": false,
+      "expired": false,
+      "alias_of": null,
+      "numchild": 0,
+      "url_path": "/home/product-range-one/product-one/",
+      "variants": [
+        {
+          "pk": 1,
+          "ref": "Small",
+          "slug": "productonesmall",
+          "stock": 1,
+          "product": 6,
+          "discount": false,
+          "base_price": "10.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        },
+        {
+          "pk": 2,
+          "ref": "Medium",
+          "slug": "productonemedium",
+          "stock": 10,
+          "product": 6,
+          "discount": false,
+          "base_price": "20.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": true,
+          "discount_percent": 20
+        },
+        {
+          "pk": 3,
+          "ref": "Large",
+          "slug": "productonelarge",
+          "stock": 0,
+          "product": 6,
+          "discount": false,
+          "base_price": "30.00",
+          "vegetarian": false,
+          "description": "<p data-block-key=\"ksews\">some text</p>",
+          "gluten_free": false,
+          "discount_percent": 20
+        }
+      ],
+      "expire_at": null,
+      "locked_at": null,
+      "locked_by": null,
+      "seo_title": "",
+      "go_live_at": null,
+      "description": "<p data-block-key=\"iwfyc\">Lorem ipsum odor amet, consectetuer adipiscing elit. Etiam blandit habitant habitasse risus magna dis molestie imperdiet curabitur. Neque fames nam velit ultricies adipiscing curae nam amet. Aliquet per mi imperdiet molestie himenaeos bibendum feugiat luctus dapibus. Curabitur amet nullam nisi tortor eros dui. Tellus enim sem nascetur dui maximus erat risus. Sem ultricies nostra potenti vulputate mattis.</p>",
+      "draft_title": "Product One",
+      "content_type": 54,
+      "live_revision": 5,
+      "show_in_menus": false,
+      "latest_revision": 5,
+      "translation_key": "81336a7d-f4a6-4f85-acd1-291afc998188",
+      "last_published_at": "2024-09-03T17:38:03.572Z",
+      "first_published_at": "2024-09-03T17:06:13.156Z",
+      "search_description": "",
+      "wagtail_admin_comments": [],
+      "has_unpublished_changes": false,
+      "latest_revision_created_at": "2024-09-03T17:38:03.541Z"
+    },
+    "approved_go_live_at": null
+  }
+},
+{
   "model": "wagtailcore.workflowpage",
   "pk": 1,
   "fields": {
@@ -1341,6 +1476,50 @@
   }
 },
 {
+  "model": "wagtailcore.pagelogentry",
+  "pk": 15,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.edit",
+    "data": {},
+    "timestamp": "2024-09-03T21:24:45.473Z",
+    "uuid": "ddeca062-2f46-4830-b91b-4b43dc7467de",
+    "user": [
+      "test"
+    ],
+    "revision": 6,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 16,
+  "fields": {
+    "content_type": [
+      "catalog",
+      "product"
+    ],
+    "label": "Product One",
+    "action": "wagtail.publish",
+    "data": {},
+    "timestamp": "2024-09-03T21:24:45.509Z",
+    "uuid": "ddeca062-2f46-4830-b91b-4b43dc7467de",
+    "user": [
+      "test"
+    ],
+    "revision": 6,
+    "content_changed": true,
+    "deleted": false,
+    "page": 6
+  }
+},
+{
   "model": "wagtailcore.pagesubscription",
   "pk": 1,
   "fields": {
@@ -1408,7 +1587,7 @@
   "model": "catalog.product",
   "pk": 6,
   "fields": {
-    "description": "<p data-block-key=\"iwfyc\">some text</p>"
+    "description": "<p data-block-key=\"iwfyc\">Lorem ipsum odor amet, consectetuer adipiscing elit. Etiam blandit habitant habitasse risus magna dis molestie imperdiet curabitur. Neque fames nam velit ultricies adipiscing curae nam amet. Aliquet per mi imperdiet molestie himenaeos bibendum feugiat luctus dapibus. Curabitur amet nullam nisi tortor eros dui. Tellus enim sem nascetur dui maximus erat risus. Sem ultricies nostra potenti vulputate mattis.</p>"
   }
 },
 {
@@ -1466,7 +1645,17 @@
     "sort_order": 0,
     "product": 6,
     "image": 3,
-    "caption": ""
+    "caption": "A Caption"
+  }
+},
+{
+  "model": "catalog.productimage",
+  "pk": 4,
+  "fields": {
+    "sort_order": 1,
+    "product": 6,
+    "image": 3,
+    "caption": "A Caption"
   }
 },
 {
