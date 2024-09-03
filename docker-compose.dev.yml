@@ -1,0 +1,4 @@
+services:
+  web:
+    volumes:
+      - ${LONGCLAW_PACKAGE_PATH}:/longclaw
