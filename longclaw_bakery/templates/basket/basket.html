@@ -11,48 +11,50 @@
     {% if basket.count == 0 %}
     <p>There is nothing in your basket!</p>
     {% else %}
-    <table>
-        <thead>
-            <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in basket %}
-            <tr>
-                <th scope="row">{% image item.variant.product.first_image.image max-75x75 %}</th>
-                <td>{{item.variant.product.title}} - {{item.variant.ref}}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.total}}</td>
-                <td><a href="#" role="delete-basket-item" data-id="{{ item.id }}">Delete</a>{% csrf_token %}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-        <tfoot>
-            {% if basket.count > 0 %}
-            <tr>
-                <td></td>
-                <td></td>
-                <td>Total</td>
-                <th scope="row">{{total_price}}</th>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <th scope="row">
-                    <a href="/checkout">Checkout</a>
-                </th>
-                <td></td>
-            </tr>
-            {% endif %}
-        </tfoot>
-    </table>
+    <div class="overflow-auto">
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in basket %}
+                <tr>
+                    <th scope="row">{% image item.variant.product.first_image.image max-75x75 %}</th>
+                    <td>{{item.variant.product.title}} - {{item.variant.ref}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.total}}</td>
+                    <td><a href="#" role="delete-basket-item" data-id="{{ item.id }}">Delete</a>{% csrf_token %}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                {% if basket.count > 0 %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                    <th scope="row">{{total_price}}</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th scope="row">
+                        <a href="/checkout">Checkout</a>
+                    </th>
+                    <td></td>
+                </tr>
+                {% endif %}
+            </tfoot>
+        </table>
+    </div>
     {% endif %}
 
     <a href="#" role="button" id="dialog-open">Show Modal</a>

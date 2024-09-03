@@ -6,18 +6,18 @@
 {% block body_class %} template-productpage {%endblock%}
 
 {% block content %}
-<div class="product_content">
+<div role="product-content">
     <div class="image">
-    {% if page.images %}
-       {% for item in page.images.all %}
+        {% if page.images %}
+        {% for item in page.images.all %}
         <div style="float: left; margin: 10px">
             {% image item.image max-1000x900 %}
             <p>{{ item.caption }}</p>
         </div>
-    {% endfor %}
-    {% else %}
+        {% endfor %}
+        {% else %}
         <img style="width: 450px; background-color: #ECEFF1;" src="..."/>
-    {% endif %}
+        {% endif %}
     </div>
     
     <div class="product_content_info">
