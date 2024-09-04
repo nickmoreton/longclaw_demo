@@ -6,18 +6,17 @@
 
 {% block content %}
 <h1>{{ page.title }}</h1>
-<div class="card-grid">
-{% for post in page.get_children %}
-   {% with post=post.specific %}
-    <div class="card">
+<div role="product-listing">
+    {% for post in page.get_children %}
+    {% with post=post.specific %}
+    <article>
+        <header><a href="{% pageurl post %}">{{ post.title }}</a></header>
         {% image post.images.first.image max-400x400 %}
-        <div class="card-body">
-            <a href="{% pageurl post %}"><h2>{{ post.title }}</h2></a>
-            <p>{{ post.description|richtext }}</p>
-            <p>From &euro;{{ post.price_range.0 }}</p>
-        </div>        
-   </div>
-   {% endwith %}
-{% endfor %}
+        <p>{{ post.description|richtext }}</p>
+        <footer>rom &euro;{{ post.price_range.0 }}</footer>
+    </article>
+    {% endwith %}
+    {% endfor %}
 </div>
+
 {% endblock %}

@@ -2,21 +2,22 @@
 
 {% load wagtailcore_tags wagtailimages_tags basket_tags %}
 
+
 {% block body_class %} template-productpage {%endblock%}
 
 {% block content %}
-<div class="product_content">
+<div role="product-content">
     <div class="image">
-    {% if page.images %}
-       {% for item in page.images.all %}
+        {% if page.images %}
+        {% for item in page.images.all %}
         <div style="float: left; margin: 10px">
             {% image item.image max-1000x900 %}
             <p>{{ item.caption }}</p>
         </div>
-    {% endfor %}
-    {% else %}
+        {% endfor %}
+        {% else %}
         <img style="width: 450px; background-color: #ECEFF1;" src="..."/>
-    {% endif %}
+        {% endif %}
     </div>
     
     <div class="product_content_info">
@@ -36,7 +37,9 @@
             <td><p>&euro;{{variant.price}}</p></td>
             <td>
                 {% if variant.stock > 0 %}
-                {% add_to_basket_btn variant.id btn_text="Add To Basket" %}
+                
+                    {% add_to_basket_btn variant.id btn_text="Add To Basket" %}
+                
                 {% else %}
                 <span class="label label-danger">Sold out</span>
                 {% endif %}

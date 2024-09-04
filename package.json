@@ -1,0 +1,33 @@
+{
+  "name": "longclaw_demo",
+  "version": "1.0.0",
+  "description": "A demo site for Longclaw shop",
+  "main": "longclaw_bakery/static/assets/longclaw_bakery.js",
+  "scripts": {
+    "styles": "sass client/styles/main.scss longclaw_bakery/static/longclaw_bakery.css --watch",
+    "scripts": "esbuild client/scripts/main.js --bundle --minify --sourcemap --outfile=longclaw_bakery/static/longclaw_bakery.js --watch",
+    "server": "browser-sync start --files \"longclaw_bakery/static/longclaw_bakery.css, longclaw_bakery/static/longclaw_bakery.js, **/*.html, **/*.py\" --proxy \"localhost:8000\" --reload-delay 500",
+    "start": "concurrently \"npm run styles\" \"npm run scripts\" \"npm run server\" --kill-others --success all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longclawshop/longclaw_demo.git"
+  },
+  "keywords": [
+    "wagtail",
+    "longclaw"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/longclawshop/longclaw_demo/issues"
+  },
+  "homepage": "https://github.com/longclawshop/longclaw_demo#readme",
+  "devDependencies": {
+    "@picocss/pico": "^2.0.6",
+    "browser-sync": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.23.1",
+    "sass": "1.77.6"
+  }
+}

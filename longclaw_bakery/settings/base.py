@@ -1,13 +1,19 @@
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
+
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
+env = os.environ.copy()
+
+DEBUG = env.get('DEBUG', 'False').lower() == 'true'
+SECRET_KEY = env.get('SECRET_KEY', 'q%ng_7whu^xd-mqf#%xh*s!-5!=pqhk-vc0-2n*l4ixh4z7qe#')
+ALLOWED_HOSTS = env.get('ALLOWED_HOSTS', '*').split(',')
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 
 # Application definition
@@ -30,7 +36,7 @@ INSTALLED_APPS = [
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail.core',
+    'wagtail',
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.settings',
     'wagtail.api.v2',
@@ -64,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
-    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.legacy.sitemiddleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -95,11 +101,16 @@ WSGI_APPLICATION = 'longclaw_bakery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if env.get('DATABASE_URL'):
+    DATABASES = {
+        'default': dj_database_url.config()
     }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
 }
 
 
@@ -137,11 +148,11 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "longclaw_bakery"
+WAGTAIL_SITE_NAME = "Longclaw Bakery"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+WAGTAILADMIN_BASE_URL = env.get('WAGTAILADMIN_BASE_URL', 'http://localhost:8000')
 
 # Longclaw settings
 
@@ -151,3 +162,5 @@ PAYMENT_GATEWAY = 'longclaw.checkout.gateways.stripe.StripePayment'
 STRIPE_SECRET = os.environ.get('STRIPE_SECRET', '')
 
 PRODUCT_VARIANT_MODEL = 'catalog.ProductVariant'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

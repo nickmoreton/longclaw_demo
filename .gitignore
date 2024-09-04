@@ -56,4 +56,5 @@ docs/_build
 webpack-stats.json
 *bundle.js*
 
-static/
+/static
+/media
